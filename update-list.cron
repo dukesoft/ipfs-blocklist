@@ -1,0 +1,1 @@
+*/5 * * * * curl https://raw.githubusercontent.com/dukesoft/ipfs-blocklist/master/blocklist.txt --output /tmp/blocklist.txt && cat /tmp/blocklist.txt | xargs -I{} docker exec -t $(docker ps -q) /bin/sh -c 'echo "location ~ \"{}\" { return 410; }" >> /etc/nginx/denylist.conf && kill -s HUP $(cat /var/run/nginx.pid)'
