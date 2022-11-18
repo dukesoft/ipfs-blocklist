@@ -6,8 +6,8 @@ This is a simple & short cronjob to automatically update the blocklist within yo
 (https://github.com/filecoin-saturn/L1-node)
 
 ### How
-Just add the .cron file in your cronjob directory or add the line in your cronjob. It has to run under
-the root user if you're running Docker under root.
+Just add the .cron file in your cronjob directory or add the line in your crontab. It has to run as
+the root user if you're running Docker as root.
 
 ### Updates
 This is a quick and dirty hack to quickly block some content from being served by your Saturn node. 
